@@ -11,11 +11,13 @@ export default Greet */
 
 //component usig arrow function 
 //props is paramter we add to customize and make function reusable
-const Greet = (props) =>{
-    console.log(props);
- return(
+
+//const Greet = (props) =>{
+    const Greet=({name,sirname}) => {  //destructuring in the parameter
+ //     const {name,sirname} = props  destructuring in the function
+        return(
     <div> 
- <h1> Namste {props.name} {props.sirname}</h1>
+ <h1> Namste {name} {sirname}</h1>
   {props.children}
  </div>
  )
